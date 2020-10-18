@@ -7,8 +7,8 @@ Web-friendly microservice for generating unpredictable UIDs.
 The environment variables `UID_HOST` and `UID_PORT` can be used to set the address and port that the server listens to. The default values are localhost and 8080.
 
 ```sh
-git clone https://github.com/BlackGlory/mpmc
-cd mpmc
+git clone https://github.com/BlackGlory/uid
+cd uid
 yarn install
 yarn build
 yarn --silent start
@@ -29,8 +29,8 @@ docker run \
 version: '3.8'
 
 services:
-  mpmc:
-    image: 'blackglory/mpmc'
+  uid:
+    image: 'blackglory/uid'
     restart: always
     environment:
       - UID_HOST=0.0.0.0
