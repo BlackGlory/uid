@@ -1,9 +1,7 @@
 # UID
-
 Web-friendly microservice for generating unpredictable UIDs.
 
 ## Install & Run
-
 The environment variables `UID_HOST` and `UID_PORT` can be used to set the address and port that the server listens to. The default values are localhost and 8080.
 
 ```sh
@@ -15,7 +13,6 @@ yarn --silent start
 ```
 
 ### Docker
-
 ```sh
 docker run \
   --detach \
@@ -24,7 +21,6 @@ docker run \
 ```
 
 #### docker-compose.yml
-
 ```yml
 version: '3.8'
 
@@ -39,11 +35,10 @@ services:
 ```
 
 ## Usage
-
 ### nanoid
-
 `GET /nanoid`
 
+#### Example
 curl
 ```sh
 curl http://localhost:8080/nanoid
@@ -55,9 +50,9 @@ await fetch('http://localhost:8080/nanoid').then(res => res.text())
 ```
 
 ### uuid
-
 `GET /uuid`
 
+#### Example
 curl
 ```sh
 curl http://localhost:8080/uuid
@@ -69,14 +64,12 @@ await fetch('http://localhost:8080/uuid').then(res => res.text())
 ```
 
 ## HTTP/2
-
 UID supports HTTP/2 for multiplexed reverse proxy connections, which can be enabled by setting the environment variable `UID_HTTP2=true`.
 
 This HTTP/2 support does not provide an automatic upgrade from HTTP/1.1, nor does it provide HTTPS.
 Therefore, the `--http2-prior-knowledge` option needs to be enabled when testing in local curl.
 
 ## UID Benchmark
-
 - Node.js v12.19.0
 - hyperfine v1.11.0
 - nanoid v3.1.12
