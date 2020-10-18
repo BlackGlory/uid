@@ -1,0 +1,59 @@
+{
+  "private": true,
+  "name": "uid",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "author": "BlackGlory <woshenmedoubuzhidao@blackglory.me>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --quiet src __tests__",
+    "test": "jest --config jest.config.js",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
+    "coverage": "jest --coverage --config jest.config.js",
+    "dev": "nodemon",
+    "dev:http2": "UID_HTTP2=true nodemon",
+    "dev:debug": "node --inspect-brk --files -r tsconfig-paths/register -r dotenv/config src/index.ts | pino-pretty",
+    "prepublishOnly": "yarn clean && yarn build",
+    "clean": "rm -rf lib",
+    "build": "cross-env NODE_ENV=production tsc --project tsconfig.build.json && tscpaths --project tsconfig.build.json --src ./src --out ./lib",
+    "start": "cross-env NODE_ENV=production node lib/index.js",
+    "start:http2": "cross-env NODE_ENV=production UID_HTTP2=true node lib/index.js",
+    "docker:build": "docker build --tag mpmc .",
+    "docker:test": "docker-compose --file docker-compose.test.yml run --rm sut",
+    "benchmark": "./benchmark/benchmark.sh"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn test && yarn build",
+      "commit-msg": "commitlint --env HUSKY_GIT_PARAMS"
+    }
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "fastify": "^3.6.0",
+    "fastify-cors": "^4.1.0",
+    "nanoid": "^3.1.12",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.10",
+    "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
+    "husky": "^4.3.0",
+    "jest": "^26.5.3",
+    "nodemon": "^2.0.5",
+    "pino-pretty": "^4.3.0",
+    "ts-jest": "^26.4.1",
+    "ts-node": "^9.0.0",
+    "tsconfig-paths": "^3.9.0",
+    "tscpaths": "^0.0.9",
+    "typescript": "^4.0.3"
+  }
+}
