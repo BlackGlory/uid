@@ -20,7 +20,8 @@
     "start:http2": "cross-env NODE_ENV=production UID_HTTP2=true node lib/index.js",
     "docker:build": "docker build --tag uid .",
     "docker:test": "docker-compose --file docker-compose.test.yml run --rm sut",
-    "benchmark": "./benchmark/benchmark.sh"
+    "benchmark": "./benchmark/benchmark.sh",
+    "release": "standard-version"
   },
   "husky": {
     "hooks": {
@@ -51,6 +52,7 @@
     "jest": "^26.5.3",
     "nodemon": "^2.0.5",
     "pino-pretty": "^4.3.0",
+    "standard-version": "^9.0.0",
     "ts-jest": "^26.4.1",
     "ts-node": "^9.0.0",
     "tsconfig-paths": "^3.9.0",
