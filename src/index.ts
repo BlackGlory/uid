@@ -1,6 +1,8 @@
 import { buildServer } from './server'
-import { PORT, HOST } from '@src/config'
+import { PORT, HOST, CI } from '@env'
 
-buildServer({ logger: true }).listen(PORT(), HOST(), (err, address) => {
-  if (err) throw err
-})
+;(async () => {
+  const server = await buildServer()
+  await server.listen(PORT(), HOST())
+  if (CI()) await server.close()
+})()

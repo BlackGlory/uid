@@ -8,7 +8,7 @@
       "@src/*": ["src/*"]
     , "@dao": ["src/dao/index"]
     , "@dao/*": ["src/dao/*"]
-    , "@config": ["src/config"]
+    , "@env": ["src/env"]
     , "@test/*": ["__tests__/*"]
     , "@services/*": ["src/services/*"]
     }
