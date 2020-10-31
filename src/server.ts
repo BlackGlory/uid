@@ -3,7 +3,7 @@ import cors from 'fastify-cors'
 import { routes as nanoid } from '@src/services/nanoid'
 import { routes as uuid } from '@src/services/uuid'
 import { HTTP2 } from '@env'
-import { Core } from '@core'
+import Core from '@core'
 
 export function buildServer({ logger = false }: Partial<{ logger: boolean }> = {}) {
   const server = fastify({

@@ -1,11 +1,13 @@
 import { buildServer } from '@src/server'
-import { Core } from '@core'
+import Core from '@core'
 import { mocked } from 'ts-jest/utils'
 import '@blackglory/jest-matchers'
 
-jest.mock('@core/uuid', () => {
+jest.mock('@core', () => {
   return {
-    generateUUID: jest.fn().mockReturnValue('uuid')
+    default: {
+      generateUUID: jest.fn().mockReturnValue('uuid')
+    }
   }
 })
 

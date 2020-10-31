@@ -1,11 +1,13 @@
 import { buildServer } from '@src/server'
-import { Core } from '@core'
+import Core from '@core'
 import { mocked } from 'ts-jest/utils'
 import '@blackglory/jest-matchers'
 
-jest.mock('@core/nanoid', () => {
+jest.mock('@core', () => {
   return {
-    generateNanoid: jest.fn().mockReturnValue('nanoid')
+    default: {
+      generateNanoid: jest.fn().mockReturnValue('nanoid')
+    }
   }
 })
 

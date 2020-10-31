@@ -1,7 +1,9 @@
 import { generateNanoid } from './nanoid'
 import { generateUUID } from './uuid'
 
-export const Core: ICore = {
+const Core: ICore = {
   generateNanoid
 , generateUUID
 }
+
+export default Core
