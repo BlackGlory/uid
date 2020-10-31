@@ -1,22 +1,26 @@
 import { buildServer } from '@src/server'
+import { Core } from '@core'
+import { mocked } from 'ts-jest/utils'
+import '@blackglory/jest-matchers'
 
-describe('uuid', () => {
-  describe('GET /uuid', () => {
-    it('200', async () => {
-      const server = buildServer()
+jest.mock('@core/uuid', () => {
+  return {
+    generateUUID: jest.fn().mockReturnValue('uuid')
+  }
+})
 
-      const res1 = await server.inject({
-        method: 'GET'
-      , url: '/uuid'
-      })
-      const res2 = await server.inject({
-        method: 'GET'
-      , url: '/uuid'
-      })
+describe('GET /uuid', () => {
+  it('200', async () => {
+    const generateUUID = mocked(Core.generateUUID)
+    const server = buildServer()
 
-      expect(res1.statusCode).toBe(200)
-      expect(res2.statusCode).toBe(200)
-      expect(res1.body).not.toBe(res2.body)
+    const res = await server.inject({
+      method: 'GET'
+    , url: '/uuid'
     })
+
+    expect(res.statusCode).toBe(200)
+    expect(generateUUID).toBeCalled()
+    expect(res.body).toBeResultOf(generateUUID)
   })
 })

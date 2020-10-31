@@ -1,22 +1,26 @@
 import { buildServer } from '@src/server'
+import { Core } from '@core'
+import { mocked } from 'ts-jest/utils'
+import '@blackglory/jest-matchers'
 
-describe('nanoid', () => {
-  describe('GET /nanoid', () => {
-    it('200', async () => {
-      const server = buildServer()
+jest.mock('@core/nanoid', () => {
+  return {
+    generateNanoid: jest.fn().mockReturnValue('nanoid')
+  }
+})
 
-      const res1 = await server.inject({
-        method: 'GET'
-      , url: '/nanoid'
-      })
-      const res2 = await server.inject({
-        method: 'GET'
-      , url: '/nanoid'
-      })
+describe('GET /nanoid', () => {
+  it('200', async () => {
+    const generateNanoid = mocked(Core.generateNanoid)
+    const server = buildServer()
 
-      expect(res1.statusCode).toBe(200)
-      expect(res2.statusCode).toBe(200)
-      expect(res1.body).not.toBe(res2.body)
+    const res = await server.inject({
+      method: 'GET'
+    , url: '/nanoid'
     })
+
+    expect(res.statusCode).toBe(200)
+    expect(generateNanoid).toBeCalled()
+    expect(res.body).toBeResultOf(generateNanoid)
   })
 })

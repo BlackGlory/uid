@@ -1,7 +1,6 @@
 import { FastifyPluginAsync } from 'fastify'
-import { nanoid } from 'nanoid'
 
-export const routes: FastifyPluginAsync = async function routes(server, options) {
+export const routes: FastifyPluginAsync<{ Core: ICore }> = async function routes(server, { Core }) {
   server.get('/nanoid', {
     schema: {
       response: {
@@ -9,6 +8,7 @@ export const routes: FastifyPluginAsync = async function routes(server, options)
       }
     }
   }, (req, reply) => {
-    reply.send(nanoid())
+    const result = Core.generateNanoid()
+    reply.send(result)
   })
 }

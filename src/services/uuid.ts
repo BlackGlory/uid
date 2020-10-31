@@ -1,7 +1,6 @@
 import { FastifyPluginAsync } from 'fastify'
-import { v4 as uuid } from 'uuid'
 
-export const routes: FastifyPluginAsync = async function routes(server, options) {
+export const routes: FastifyPluginAsync<{ Core: ICore }> = async function routes(server, { Core }) {
   server.get('/uuid', {
     schema: {
       response: {
@@ -9,6 +8,7 @@ export const routes: FastifyPluginAsync = async function routes(server, options)
       }
     }
   }, (req, reply) => {
-    reply.send(uuid())
+    const result = Core.generateUUID()
+    reply.send(result)
   })
 }

@@ -6,6 +6,8 @@
   , "baseUrl": "."
   , "paths": {
       "@src/*": ["src/*"]
+    , "@core": ["src/core/index"]
+    , "@core/*": ["src/core/*"]
     , "@dao": ["src/dao/index"]
     , "@dao/*": ["src/dao/*"]
     , "@env": ["src/env"]
