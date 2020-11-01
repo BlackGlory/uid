@@ -11,6 +11,7 @@ COPY . ./
 RUN yarn build
 
 ENV UID_HOST=0.0.0.0
+ENV UID_PORT=8080
 EXPOSE 8080
 ENTRYPOINT ["yarn"]
 CMD ["--silent", "start"]
