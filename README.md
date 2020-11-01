@@ -63,16 +63,16 @@ JavaScript
 await fetch('http://localhost:8080/uuid').then(res => res.text())
 ```
 
-## 统计信息
+## Stats
 
 `GET /stats`
 
-输出JSON:
+return JSON:
 ```ts
 {
-  memoryUsage: any // 与Node.js API保持一致
-  cpuUsage: any // 与Node.js API保持一致
-  resourceUsage: any // 与Node.js API保持一致
+  memoryUsage: NodeJS.MemoryUsage
+  cpuUsage: NodeJS.CpuUsage
+  resourceUsage: NodeJS.ResourceUsage
 }
 ```
 
