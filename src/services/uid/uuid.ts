@@ -8,7 +8,7 @@ export const routes: FastifyPluginAsync<{ Core: ICore }> = async function routes
       }
     }
   }, (req, reply) => {
-    const result = Core.generateUUID()
+    const result = Core.UUID.generate()
     reply.send(result)
   })
 }

@@ -1,24 +1,25 @@
 import fastify from 'fastify'
 import cors from 'fastify-cors'
-import { routes as nanoid } from '@src/services/nanoid'
-import { routes as uuid } from '@src/services/uuid'
+import { routes as uid } from '@src/services/uid'
+import { routes as stats } from '@src/services/stats'
 import { HTTP2, NODE_ENV, NodeEnv } from '@env'
 import Core from '@core'
 
-export function buildServer({ logger = false }: Partial<{ logger: boolean }> = {}) {
+export function buildServer() {
   const server = fastify({
     logger: getLoggerOptions()
     /* @ts-ignore */
   , http2: HTTP2()
   })
   server.register(cors, { origin: true })
-  server.register(nanoid, { Core })
-  server.register(uuid, { Core })
+  server.register(uid, { Core })
+  server.register(stats, { Core })
   return server
 }
 
 function getLoggerOptions() {
   switch (NODE_ENV()) {
+    case NodeEnv.Test: return { level: 'error' }
     case NodeEnv.Production: return { level: 'error' }
     case NodeEnv.Development: return { level: 'trace' }
     default: return false

@@ -1,17 +1,19 @@
 import Core from '@core'
 import 'jest-extended'
 
-describe('generateNanoid(): string', () => {
-  it('return string', () => {
-    const result = Core.generateNanoid()
+describe('Nanoid', () => {
+  describe('generate(): string', () => {
+    it('return string', () => {
+      const result = Core.Nanoid.generate()
 
-    expect(result).toBeString()
-  })
+      expect(result).toBeString()
+    })
 
-  it('return differenct strings', () => {
-    const result1 = Core.generateNanoid()
-    const result2 = Core.generateNanoid()
+    it('return differenct strings', () => {
+      const result1 = Core.Nanoid.generate()
+      const result2 = Core.Nanoid.generate()
 
-    expect(result1).not.toEqual(result2)
+      expect(result1).not.toEqual(result2)
+    })
   })
 })

@@ -63,6 +63,19 @@ JavaScript
 await fetch('http://localhost:8080/uuid').then(res => res.text())
 ```
 
+## 统计信息
+
+`GET /stats`
+
+输出JSON:
+```ts
+{
+  memoryUsage: any // 与Node.js API保持一致
+  cpuUsage: any // 与Node.js API保持一致
+  resourceUsage: any // 与Node.js API保持一致
+}
+```
+
 ## HTTP/2
 UID supports HTTP/2 for multiplexed reverse proxy connections, which can be enabled by setting the environment variable `UID_HTTP2=true`.
 

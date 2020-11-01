@@ -1,4 +1,15 @@
 interface ICore {
-  generateNanoid(): string
-  generateUUID(): string
+  stats(): {
+    memoryUsage: NodeJS.MemoryUsage
+    cpuUsage: NodeJS.CpuUsage
+    resourceUsage: NodeJS.ResourceUsage
+  }
+
+  Nanoid: {
+    generate(): string
+  }
+
+  UUID: {
+    generate(): string
+  }
 }

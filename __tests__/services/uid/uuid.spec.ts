@@ -6,14 +6,16 @@ import '@blackglory/jest-matchers'
 jest.mock('@core', () => {
   return {
     default: {
-      generateUUID: jest.fn().mockReturnValue('uuid')
+      UUID: {
+        generate: jest.fn().mockReturnValue('uuid')
+      }
     }
   }
 })
 
 describe('GET /uuid', () => {
   it('200', async () => {
-    const generateUUID = mocked(Core.generateUUID)
+    const generate = mocked(Core.UUID.generate)
     const server = buildServer()
 
     const res = await server.inject({
@@ -22,7 +24,7 @@ describe('GET /uuid', () => {
     })
 
     expect(res.statusCode).toBe(200)
-    expect(generateUUID).toBeCalled()
-    expect(res.body).toBeResultOf(generateUUID)
+    expect(generate).toBeCalled()
+    expect(res.body).toBeResultOf(generate)
   })
 })
