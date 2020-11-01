@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/BlackGlory/uid/compare/v1.2.1...v1.3.0) (2020-11-01)
+
+
+### Features
+
+* /stats ([bd7b8da](https://github.com/BlackGlory/uid/commit/bd7b8da631a4069f0bae20aec4c78bfb4980e9aa))
+
+
+### Bug Fixes
+
+* logging level ([0d30ade](https://github.com/BlackGlory/uid/commit/0d30ade1e4b25f2bafcc3432b8d20a6033ebf287))
+
 ### [1.2.1](https://github.com/BlackGlory/uid/compare/v1.2.0...v1.2.1) (2020-10-31)
 
 ## [1.2.0](https://github.com/BlackGlory/uid/compare/v1.1.0...v1.2.0) (2020-10-28)
