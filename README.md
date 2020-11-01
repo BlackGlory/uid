@@ -28,8 +28,6 @@ services:
   uid:
     image: 'blackglory/uid'
     restart: always
-    environment:
-      - UID_HOST=0.0.0.0
     ports:
       - '8080:8080'
 ```
