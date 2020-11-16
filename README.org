@@ -42,12 +42,12 @@ services:
 Return string.
 
 ***** Example
-curl
+****** curl
 #+BEGIN_SRC sh
 curl http://localhost:8080/nanoid
 #+END_SRC
 
-JavaScript
+****** JavaScript
 #+BEGIN_SRC js
 await fetch('http://localhost:8080/nanoid').then(res => res.text())
 #+END_SRC
@@ -58,12 +58,12 @@ await fetch('http://localhost:8080/nanoid').then(res => res.text())
 Return string.
 
 ***** Example
-curl
+****** curl
 #+BEGIN_SRC sh
 curl http://localhost:8080/uuid
 #+END_SRC
 
-JavaScript
+****** JavaScript
 #+BEGIN_SRC js 
 await fetch('http://localhost:8080/uuid').then(res => res.text())
 #+END_SRC
