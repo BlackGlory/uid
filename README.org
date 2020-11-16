@@ -4,24 +4,24 @@ Web-friendly microservice for generating unpredictable UIDs.
 ** Install & Run
 The environment variables =UID_HOST= and =UID_PORT= can be used to set the address and port that the server listens to. The default values are localhost and 8080.
 
-#+BEGIN_EXAMPLE sh
+#+BEGIN_SRC sh
 git clone https://github.com/BlackGlory/uid
 cd uid
 yarn install
 yarn build
 yarn --silent start
-#+END_EXAMPLE
+#+END_SRC
 
 *** Docker
-#+BEGIN_EXAMPLE sh
+#+BEGIN_SRC sh
 docker run \
   --detach \
   --publish 8080:8080 \
   blackglory/uid
-#+END_EXAMPLE
+#+END_SRC
 
 **** docker-compose.yml
-#+BEGIN_EXAMPLE yaml
+#+BEGIN_SRC yaml
 version: '3.8'
 
 services:
@@ -30,7 +30,7 @@ services:
     restart: always
     ports:
       - '8080:8080'
-#+END_EXAMPLE
+#+END_SRC
 
 ** Usage
 *** nanoid
@@ -38,40 +38,40 @@ services:
 
 **** Example
 curl
-#+BEGIN_EXAMPLE sh
+#+BEGIN_SRC sh
 curl http://localhost:8080/nanoid
-#+END_EXAMPLE
+#+END_SRC
 
 JavaScript
-#+BEGIN_EXAMPLE js
+#+BEGIN_SRC js
 await fetch('http://localhost:8080/nanoid').then(res => res.text())
-#+END_EXAMPLE
+#+END_SRC
 
 *** uuid
 =GET /uuid=
 
 **** Example
 curl
-#+BEGIN_EXAMPLE sh
+#+BEGIN_SRC sh
 curl http://localhost:8080/uuid
-#+END_EXAMPLE
+#+END_SRC
 
 JavaScript
-#+BEGIN_EXAMPLE js 
+#+BEGIN_SRC js 
 await fetch('http://localhost:8080/uuid').then(res => res.text())
-#+END_EXAMPLE
+#+END_SRC
 
 ** Stats
 =GET /stats=
 
 Return JSON:
-#+BEGIN_EXAMPLE ts
+#+BEGIN_SRC ts
 {
   memoryUsage: NodeJS.MemoryUsage
   cpuUsage: NodeJS.CpuUsage
   resourceUsage: NodeJS.ResourceUsage
 }
-#+END_EXAMPLE
+#+END_SRC
 
 ** HTTP/2
 UID supports HTTP/2 for multiplexed reverse proxy connections, which can be enabled by setting the environment variable =UID_HTTP2=true=.
