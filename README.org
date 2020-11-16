@@ -35,12 +35,13 @@ services:
 #+END_SRC
 
 ** API
-*** Nano ID
+*** Public
+**** Nano ID
 =GET /nanoid=
 
 Return string.
 
-**** Example
+***** Example
 curl
 #+BEGIN_SRC sh
 curl http://localhost:8080/nanoid
@@ -51,12 +52,12 @@ JavaScript
 await fetch('http://localhost:8080/nanoid').then(res => res.text())
 #+END_SRC
 
-*** UUID
+**** UUID
 =GET /uuid=
 
 Return string.
 
-**** Example
+***** Example
 curl
 #+BEGIN_SRC sh
 curl http://localhost:8080/uuid
@@ -67,7 +68,7 @@ JavaScript
 await fetch('http://localhost:8080/uuid').then(res => res.text())
 #+END_SRC
 
-*** Stats
+**** Stats
 =GET /stats=
 
 Return JSON:
