@@ -2,7 +2,9 @@
 Web-friendly microservice for generating unpredictable UIDs.
 
 ** Install
-The environment variables =UID_HOST= and =UID_PORT= can be used to set the address and port that the server listens to. The default values are localhost and 8080.
+The environment variables =UID_HOST= and =UID_PORT= can be used to set the address and port
+that the server listens to.
+The default values are localhost and 8080.
 
 #+BEGIN_SRC sh
 git clone https://github.com/BlackGlory/uid
@@ -78,9 +80,11 @@ Return JSON:
 #+END_SRC
 
 ** HTTP/2
-UID supports HTTP/2 for multiplexed reverse proxy connections, which can be enabled by setting the environment variable =UID_HTTP2=true=.
+UID supports HTTP/2 for multiplexed reverse proxy connections,
+which can be enabled by setting the environment variable =UID_HTTP2=true=.
 
-This HTTP/2 support does not provide an automatic upgrade from HTTP/1.1, nor does it provide HTTPS.
+This HTTP/2 support does not provide an automatic upgrade from HTTP/1.1,
+nor does it provide HTTPS.
 Therefore, the =--http2-prior-knowledge= option needs to be enabled when testing in local curl.
 
 ** UID Benchmark
