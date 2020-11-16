@@ -1,7 +1,7 @@
 * UID
 Web-friendly microservice for generating unpredictable UIDs.
 
-** Install & Run
+** Install
 The environment variables =UID_HOST= and =UID_PORT= can be used to set the address and port that the server listens to. The default values are localhost and 8080.
 
 #+BEGIN_SRC sh
@@ -32,9 +32,11 @@ services:
       - '8080:8080'
 #+END_SRC
 
-** Usage
-*** nanoid
+** API
+*** Nano ID
 =GET /nanoid=
+
+Return string.
 
 **** Example
 curl
@@ -47,8 +49,10 @@ JavaScript
 await fetch('http://localhost:8080/nanoid').then(res => res.text())
 #+END_SRC
 
-*** uuid
+*** UUID
 =GET /uuid=
+
+Return string.
 
 **** Example
 curl
@@ -61,7 +65,7 @@ JavaScript
 await fetch('http://localhost:8080/uuid').then(res => res.text())
 #+END_SRC
 
-** Stats
+*** Stats
 =GET /stats=
 
 Return JSON:
