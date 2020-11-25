@@ -80,6 +80,17 @@ Return JSON:
 }
 #+END_SRC
 
+***** Example
+****** curl
+#+BEGIN_SRC sh
+curl 'http://localhost:8080/stats'
+#+END_SRC
+
+****** JavaScript
+#+BEGIN_SRC js
+await fetch('http://localhost:8080/stats').then(res => res.json())
+#+END_SRC
+
 ** HTTP/2
 UID supports HTTP/2 for multiplexed reverse proxy connections,
 which can be enabled by setting the environment variable =UID_HTTP2=true=.
