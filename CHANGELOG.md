@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/BlackGlory/uid/compare/v1.4.0...v1.5.0) (2020-12-17)
+
+
+### Features
+
+* add robots.txt ([8670167](https://github.com/BlackGlory/uid/commit/8670167be2b99217b21d3fd61c72ef2e57a5a151))
+
 ## [1.4.0](https://github.com/BlackGlory/uid/compare/v1.3.3...v1.4.0) (2020-12-17)
 
 
