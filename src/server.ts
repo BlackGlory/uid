@@ -10,6 +10,11 @@ export function buildServer() {
     logger: getLoggerOptions()
     /* @ts-ignore */
   , http2: HTTP2()
+  , ajv: {
+      customOptions: {
+        coerceTypes: false
+      }
+    }
   })
   server.register(cors, { origin: true })
   server.register(uid, { Core })
