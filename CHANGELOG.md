@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/BlackGlory/uid/compare/v1.3.3...v1.4.0) (2020-12-17)
+
+
+### Features
+
+* custom ajv options ([77f7c71](https://github.com/BlackGlory/uid/commit/77f7c710a70fe426edced6a09bc8028497173ff3))
+* memoize environments ([9975091](https://github.com/BlackGlory/uid/commit/99750917c2a7958c5ade4e616c3a687321c58a85))
+
 ### [1.3.3](https://github.com/BlackGlory/uid/compare/v1.3.2...v1.3.3) (2020-12-10)
 
 ### [1.3.2](https://github.com/BlackGlory/uid/compare/v1.3.1...v1.3.2) (2020-11-01)
