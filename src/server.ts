@@ -1,7 +1,8 @@
 import fastify from 'fastify'
 import cors from 'fastify-cors'
-import { routes as uid } from '@src/services/uid'
-import { routes as stats } from '@src/services/stats'
+import { routes as uid } from '@services/uid'
+import { routes as stats } from '@services/stats'
+import { routes as robots } from '@services/robots'
 import { HTTP2, NODE_ENV, NodeEnv } from '@env'
 import Core from '@core'
 
@@ -19,6 +20,7 @@ export function buildServer() {
   server.register(cors, { origin: true })
   server.register(uid, { Core })
   server.register(stats, { Core })
+  server.register(robots)
   return server
 }
 
