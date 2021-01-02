@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.2](https://github.com/BlackGlory/uid/compare/v1.5.1...v1.5.2) (2021-01-02)
+
+
+### Bug Fixes
+
+* process.on ([65deab3](https://github.com/BlackGlory/uid/commit/65deab30c102bdc435bcdaf0dfc1c5e0b7b01f0c))
+
 ### [1.5.1](https://github.com/BlackGlory/uid/compare/v1.5.0...v1.5.1) (2020-12-26)
 
 ## [1.5.0](https://github.com/BlackGlory/uid/compare/v1.4.0...v1.5.0) (2020-12-17)
