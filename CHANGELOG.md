@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/BlackGlory/uid/compare/v1.6.0...v2.0.0) (2021-01-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* /stats => /metrics
+
+### Features
+
+* rename stats to metrics ([281f86c](https://github.com/BlackGlory/uid/commit/281f86c287e8662534a59199f2cc4d935618ad0b))
+
 ## [1.6.0](https://github.com/BlackGlory/uid/compare/v1.5.3...v1.6.0) (2021-01-18)
 
 
