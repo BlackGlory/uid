@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/BlackGlory/uid/compare/v1.5.3...v1.6.0) (2021-01-18)
+
+
+### Features
+
+* support pm2 ([5156b19](https://github.com/BlackGlory/uid/commit/5156b19cc0785c8281ac5d23b1ba9b7c46db92ec))
+
 ### [1.5.3](https://github.com/BlackGlory/uid/compare/v1.5.2...v1.5.3) (2021-01-08)
 
 ### [1.5.2](https://github.com/BlackGlory/uid/compare/v1.5.1...v1.5.2) (2021-01-02)
