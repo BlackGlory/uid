@@ -1,5 +1,5 @@
 interface ICore {
-  stats(): {
+  metrics(): {
     memoryUsage: NodeJS.MemoryUsage
     cpuUsage: NodeJS.CpuUsage
     resourceUsage: NodeJS.ResourceUsage

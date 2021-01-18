@@ -1,9 +1,9 @@
-import { stats } from './stats'
+import { metrics } from './metrics'
 import * as Nanoid from './nanoid'
 import * as UUID from './uuid'
 
 const Core: ICore = {
-  stats
+  metrics
 , Nanoid
 , UUID
 }

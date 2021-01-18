@@ -68,8 +68,8 @@ curl http://localhost:8080/uuid
 await fetch('http://localhost:8080/uuid').then(res => res.text())
 #+END_SRC
 
-**** Stats
-=GET /stats=
+**** Metrics
+=GET /metrics=
 
 Return JSON:
 #+BEGIN_SRC ts
@@ -83,12 +83,12 @@ Return JSON:
 ***** Example
 ****** curl
 #+BEGIN_SRC sh
-curl 'http://localhost:8080/stats'
+curl 'http://localhost:8080/metrics'
 #+END_SRC
 
 ****** JavaScript
 #+BEGIN_SRC js
-await fetch('http://localhost:8080/stats').then(res => res.json())
+await fetch('http://localhost:8080/metrics').then(res => res.json())
 #+END_SRC
 
 ** HTTP/2
