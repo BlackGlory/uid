@@ -1,17 +1,18 @@
 FROM node:12-alpine
 WORKDIR /usr/src/app
 
-COPY package.json yarn.lock ./
+COPY package.json pnpm-lock.yaml ./
 
-RUN yarn install \
- && yarn cache clean
+RUN npm install -g pnpm \
+ && pnpm install \
+ && pnpm store prune
 
 COPY . ./
 
-RUN yarn build
+RUN pnpm build
 
 ENV UID_HOST=0.0.0.0
 ENV UID_PORT=8080
 EXPOSE 8080
-ENTRYPOINT ["yarn"]
+ENTRYPOINT ["pnpm"]
 CMD ["--silent", "start"]
