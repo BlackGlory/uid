@@ -1,9 +1,12 @@
-import { buildServer } from '@src/server'
+import { startService, stopService, getServer } from '@test/utils'
+
+beforeEach(startService)
+afterEach(stopService)
 
 describe('robots', () => {
   describe('GET /robots.txt', () => {
     it('200', async () => {
-      const server = await buildServer()
+      const server = getServer()
 
       const res = await server.inject({
         method: 'GET'

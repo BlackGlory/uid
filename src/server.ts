@@ -1,7 +1,8 @@
 import fastify from 'fastify'
 import cors from 'fastify-cors'
+import metricsPlugin = require('fastify-metrics')
+import { Registry } from 'prom-client'
 import { routes as uid } from '@services/uid'
-import { routes as metrics } from '@services/metrics'
 import { routes as robots } from '@services/robots'
 import { HTTP2, NODE_ENV, NodeEnv } from '@env'
 import Core from '@core'
@@ -12,10 +13,15 @@ export function buildServer() {
     /* @ts-ignore */
   , http2: HTTP2()
   })
+  server.register(metricsPlugin, {
+    endpoint: '/metrics'
+  , register: new Registry()
+  })
+
   server.register(cors, { origin: true })
   server.register(uid, { Core })
-  server.register(metrics, { Core })
   server.register(robots)
+
   return server
 }
 

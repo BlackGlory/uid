@@ -1,8 +1,11 @@
-import { buildServer } from '@src/server'
+import { startService, stopService, getServer } from '@test/utils'
+
+beforeEach(startService)
+afterEach(stopService)
 
 describe('GET /uuid', () => {
   it('200', async () => {
-    const server = buildServer()
+    const server = getServer()
 
     const res = await server.inject({
       method: 'GET'

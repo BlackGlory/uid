@@ -64,31 +64,8 @@ curl http://localhost:8080/uuid
 #+END_SRC
 
 ****** JavaScript
-#+BEGIN_SRC js 
-await fetch('http://localhost:8080/uuid').then(res => res.text())
-#+END_SRC
-
-**** Metrics
-=GET /metrics=
-
-Return JSON:
-#+BEGIN_SRC ts
-{
-  memoryUsage: NodeJS.MemoryUsage
-  cpuUsage: NodeJS.CpuUsage
-  resourceUsage: NodeJS.ResourceUsage
-}
-#+END_SRC
-
-***** Example
-****** curl
-#+BEGIN_SRC sh
-curl 'http://localhost:8080/metrics'
-#+END_SRC
-
-****** JavaScript
 #+BEGIN_SRC js
-await fetch('http://localhost:8080/metrics').then(res => res.json())
+await fetch('http://localhost:8080/uuid').then(res => res.text())
 #+END_SRC
 
 ** HTTP/2

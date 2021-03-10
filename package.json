@@ -67,7 +67,9 @@
     "common-tags": "^1.8.0",
     "fastify": "^3.12.0",
     "fastify-cors": "^5.2.0",
+    "fastify-metrics": "^7.1.0",
     "nanoid": "^3.1.20",
+    "prom-client": "^13.1.0",
     "uuid": "^8.3.2",
     "value-getter": "^0.1.7"
   }
