@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/BlackGlory/uid/compare/v2.0.3...v2.1.0) (2021-03-14)
+
+
+### Features
+
+* prometheus metrics ([8776a39](https://github.com/BlackGlory/uid/commit/8776a39053ab2d5df41dc7b26727f797c05e5f63))
+
 ### [2.0.3](https://github.com/BlackGlory/uid/compare/v2.0.2...v2.0.3) (2021-02-20)
 
 ### [2.0.2](https://github.com/BlackGlory/uid/compare/v2.0.1...v2.0.2) (2021-02-04)
