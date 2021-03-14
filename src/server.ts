@@ -7,6 +7,8 @@ import { routes as robots } from '@services/robots'
 import { HTTP2, NODE_ENV, NodeEnv } from '@env'
 import Core from '@core'
 
+type LoggerLevel = 'trace' | 'debug' | 'info' | 'warn' | 'error' | 'fatal'
+
 export function buildServer() {
   const server = fastify({
     logger: getLoggerOptions()
@@ -25,7 +27,7 @@ export function buildServer() {
   return server
 }
 
-function getLoggerOptions() {
+function getLoggerOptions(): { level: LoggerLevel } | boolean {
   switch (NODE_ENV()) {
     case NodeEnv.Test: return { level: 'error' }
     case NodeEnv.Production: return { level: 'error' }
