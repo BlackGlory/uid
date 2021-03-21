@@ -13,6 +13,7 @@ COPY . ./
 
 RUN yarn build
 
+ENV NODE_ENV=production
 ENV UID_HOST=0.0.0.0
 ENV UID_PORT=8080
 EXPOSE 8080
