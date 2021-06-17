@@ -21,7 +21,7 @@
     "start:pm2": "pm2 start lib/index.js --name 'chan' --wait-ready",
     "start:http2": "cross-env UID_HTTP2=true node lib/index.js",
     "docker:build": "docker build --tag uid .",
-    "docker:test": "docker-compose --file docker-compose.test.yml run --rm sut",
+    "docker:test": "docker-compose --file docker-compose.test.yml run --rm test",
     "benchmark": "./benchmark/benchmark.sh",
     "release": "standard-version"
   },
