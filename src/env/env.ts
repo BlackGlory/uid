@@ -1,6 +1,6 @@
 import { ValueGetter } from 'value-getter'
 import { isNumber } from '@blackglory/types'
-import { Getter } from 'hotypes'
+import { Getter } from 'justypes'
 import { getCache } from '@env/cache'
 
 export enum NodeEnv {
@@ -49,7 +49,7 @@ export const HTTP2: Getter<boolean> =
     .get()
 
 function env(name: string): ValueGetter<string | undefined> {
-  return new ValueGetter(() => process.env[name])
+  return new ValueGetter(name, () => process.env[name])
 }
 
 function toBool(val: string | boolean | undefined): boolean | undefined {
