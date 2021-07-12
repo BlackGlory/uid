@@ -67,7 +67,7 @@
   "dependencies": {
     "@blackglory/go": "^0.1.0",
     "@blackglory/types": "^0.4.7",
-    "extra-tags": "^0.2.0",
+    "extra-tags": "^0.2.2",
     "fastify": "^3.19.0",
     "fastify-cors": "^6.0.1",
     "fastify-metrics": "^7.2.3",
