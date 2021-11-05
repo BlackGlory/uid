@@ -21,7 +21,10 @@ RUN apk add --update --no-cache --virtual .build-deps \
       git \
  && yarn install --production \
  && yarn cache clean \
- && apk del .build-deps
+ && apk del .build-deps \
+ && apk add --update --no-cache \
+      # healthcheck
+      curl
 
 COPY . ./
 
