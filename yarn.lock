@@ -4395,7 +4395,7 @@ istanbul-reports@^3.0.2:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
 
-iterable-operator@^0.14.3, iterable-operator@^0.14.4:
+iterable-operator@^0.14.4:
   version "0.14.4"
   resolved "https://registry.yarnpkg.com/iterable-operator/-/iterable-operator-0.14.4.tgz#2df82a6c0aaba6a703d5041b3b50727941578175"
   integrity sha512-WDuYROKUwZdRAXmIg23hiLWG/o3YJHFqrvV/UtgcZwxJfni4RgUNegCKOvndyHqtC7d9gLATeFdScFOeuXekew==
@@ -7908,12 +7908,7 @@ write-file-atomic@^3.0.0:
     signal-exit "^3.0.2"
     typedarray-to-buffer "^3.1.5"
 
-ws@^7.0.0:
-  version "7.4.3"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-7.4.3.tgz#1f9643de34a543b8edb124bdcbc457ae55a6e5cd"
-  integrity sha512-hr6vCR76GsossIRsr8OLR9acVVm1jyfEWvhbNjtgPOrfvAlKzvyeg/P6r8RuDjRyrcQoPQT7K0DGEPc7Ae6jzA==
-
-ws@^7.4.5:
+ws@^7.0.0, ws@^7.4.5:
   version "7.5.0"
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.0.tgz#0033bafea031fb9df041b2026fc72a571ca44691"
   integrity sha512-6ezXvzOZupqKj4jUqbQ9tXuJNo+BR2gU8fFRk3XCP3e0G6WT414u5ELe6Y0vtp7kmSJ3F7YWObSNr1ESsgi4vw==
