@@ -70,6 +70,7 @@
     "@blackglory/go": "^0.1.0",
     "@blackglory/types": "^0.6.5",
     "app-root-path": "^3.0.0",
+    "extra-filesystem": "^0.4.1",
     "extra-tags": "^0.2.4",
     "fastify": "^3.25.3",
     "fastify-cors": "^6.0.2",
