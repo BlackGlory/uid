@@ -42,7 +42,6 @@
     "@types/app-root-path": "^1.2.4",
     "@types/jest": "^27.4.0",
     "@types/node": "16",
-    "@types/semver": "^7.3.9",
     "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
@@ -71,6 +70,7 @@
     "@blackglory/types": "^0.6.5",
     "app-root-path": "^3.0.0",
     "extra-filesystem": "^0.4.1",
+    "extra-semver": "^0.1.0",
     "extra-tags": "^0.2.4",
     "fastify": "^3.27.1",
     "fastify-cors": "^6.0.2",
@@ -78,7 +78,6 @@
     "justypes": "^0.1.6",
     "nanoid": "^3.2.0",
     "prom-client": "^14.0.1",
-    "semver": "^7.3.5",
     "uuid": "^8.3.2",
     "value-getter": "^0.2.2"
   }
