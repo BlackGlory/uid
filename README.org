@@ -11,6 +11,7 @@ git clone https://github.com/BlackGlory/uid
 cd uid
 yarn install
 yarn build
+yarn bundle
 yarn --silent start
 #+END_SRC
 
