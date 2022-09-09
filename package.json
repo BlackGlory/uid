@@ -26,7 +26,7 @@
     "smoke": "cross-env NODE_ENV=test node dist/index.cjs",
     "docker:build": "docker build --tag uid .",
     "docker:test": "docker-compose --file docker-compose.test.yml run --rm test",
-    "benchmark": "./benches/benchmark.sh",
+    "bench": "./benches/benchmark.sh",
     "release": "standard-version"
   },
   "husky": {
