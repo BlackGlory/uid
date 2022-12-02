@@ -9,6 +9,7 @@ export const routes: FastifyPluginAsync<{ Core: ICore }> = async function routes
     }
   }, (req, reply) => {
     const result = Core.Nanoid.generate()
-    reply.send(result)
+
+    return reply.send(result)
   })
 }

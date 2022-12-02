@@ -1,4 +1,4 @@
-import { buildServer } from '@src/server'
+import { buildServer } from '@src/server.js'
 
 let server: ReturnType<typeof buildServer>
 let address: string
@@ -9,10 +9,9 @@ export function getAddress() {
 
 export async function startService() {
   server = buildServer()
-  address = await server.listen(0)
+  address = await server.listen()
 }
 
 export async function stopService() {
-  server.metrics.clearRegister()
   await server.close()
 }

@@ -1,4 +1,4 @@
-import Core from '@core'
+import Core from '@core/index.js'
 import 'jest-extended'
 
 describe('UUID', () => {

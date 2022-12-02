@@ -1,7 +1,7 @@
 import { ValueGetter } from 'value-getter'
 import { isNumber } from '@blackglory/types'
 import { Getter } from 'justypes'
-import { getCache } from '@env/cache'
+import { getCache } from '@env/cache.js'
 
 export enum NodeEnv {
   Test
@@ -34,20 +34,8 @@ export const PORT: Getter<number> =
     .memoize(getCache)
     .get()
 
-export const HTTP2: Getter<boolean> =
-  env('UID_HTTP2')
-    .convert(toBool)
-    .default(false)
-    .memoize(getCache)
-    .get()
-
 function env(name: string): ValueGetter<string | undefined> {
   return new ValueGetter(name, () => process.env[name])
-}
-
-function toBool(val: string | boolean | undefined): boolean | undefined {
-  if (val) return val === 'true'
-  return false
 }
 
 function toInteger(val: string | number | undefined ): number | undefined {

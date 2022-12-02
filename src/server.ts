@@ -1,30 +1,27 @@
-import fastify from 'fastify'
-import cors from 'fastify-cors'
-import metricsPlugin from 'fastify-metrics'
-import { Registry } from 'prom-client'
-import { routes as uid } from '@services/uid'
-import { routes as robots } from '@services/robots'
-import { routes as health } from '@services/health'
-import { HTTP2, NODE_ENV, NodeEnv } from '@env'
-import Core from '@core'
+import { fastify } from 'fastify'
+import cors from '@fastify/cors'
+import { routes as uid } from '@services/uid/index.js'
+import { routes as robots } from '@services/robots/index.js'
+import { routes as health } from '@services/health/index.js'
+import { NODE_ENV, NodeEnv } from '@env/index.js'
+import Core from '@core/index.js'
 import path from 'path'
-import { path as appRoot } from 'app-root-path'
+import { getAppRoot } from '@src/utils.js'
 import { readJSONFileSync } from 'extra-filesystem'
 import { isntUndefined, isString } from '@blackglory/types'
 import { assert } from '@blackglory/errors'
 import { isAcceptable } from 'extra-semver'
 
 const pkg = readJSONFileSync<{ version: string }>(
-  path.join(appRoot, 'package.json')
+  path.join(getAppRoot(), 'package.json')
 )
 
 type LoggerLevel = 'trace' | 'debug' | 'info' | 'warn' | 'error' | 'fatal'
 
 export function buildServer() {
   const server = fastify({
-    logger: getLoggerOptions()
-    /* @ts-ignore */
-  , http2: HTTP2()
+    forceCloseConnections: true
+  , logger: getLoggerOptions()
   })
 
   server.addHook('onRequest', async (req, reply) => {
@@ -40,10 +37,6 @@ export function buildServer() {
     }
   })
 
-  server.register(metricsPlugin, {
-    endpoint: '/metrics'
-  , register: new Registry()
-  })
   server.register(cors, { origin: true })
   server.register(uid, { Core })
   server.register(robots)

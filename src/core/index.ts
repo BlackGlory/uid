@@ -1,5 +1,5 @@
-import * as Nanoid from './nanoid'
-import * as UUID from './uuid'
+import * as Nanoid from './nanoid.js'
+import * as UUID from './uuid.js'
 
 const Core: ICore = {
   Nanoid

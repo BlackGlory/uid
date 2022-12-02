@@ -68,11 +68,3 @@ curl http://localhost:8080/uuid
 #+BEGIN_SRC js
 await fetch('http://localhost:8080/uuid').then(res => res.text())
 #+END_SRC
-
-** HTTP/2
-UID supports HTTP/2 for multiplexed reverse proxy connections,
-which can be enabled by setting the environment variable =UID_HTTP2=true=.
-
-This HTTP/2 support does not provide an automatic upgrade from HTTP/1.1,
-nor does it provide HTTPS.
-Therefore, the =--http2-prior-knowledge= option needs to be enabled when testing in local curl.
