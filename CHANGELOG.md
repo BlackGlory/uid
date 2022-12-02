@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/BlackGlory/uid/compare/v2.3.2...v3.0.0) (2022-12-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* - Removed `/metrics`
+- Removed HTTP2 support
+
+* upgrade dependencies ([becb24e](https://github.com/BlackGlory/uid/commit/becb24e8d7779e496539ca3179754025327ae58c))
+
 ### [2.3.2](https://github.com/BlackGlory/uid/compare/v2.3.1...v2.3.2) (2022-07-27)
 
 ### [2.3.1](https://github.com/BlackGlory/uid/compare/v2.3.0...v2.3.1) (2022-02-13)
