@@ -1,8 +1,8 @@
 import { Benchmark } from 'extra-benchmark'
-import { nanoid } from './nanoid'
-import { nanoidNonSecure } from './nanoid-non-secure'
-import { uuid } from './uuid'
 import { go } from '@blackglory/go'
+import { v4 as uuid } from 'uuid'
+import { nanoid } from 'nanoid'
+import { nanoid as nanoidNonSecure } from 'nanoid/non-secure'
 
 const benchmark = new Benchmark('UUID')
 
