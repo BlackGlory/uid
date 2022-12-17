@@ -1,12 +1,11 @@
 import Core from '@core/index.js'
-import 'jest-extended'
 
 describe('Nanoid', () => {
   describe('generate(): string', () => {
     it('return string', () => {
       const result = Core.Nanoid.generate()
 
-      expect(result).toBeString()
+      expect(result).not.toBe('')
     })
 
     it('return differenct strings', () => {

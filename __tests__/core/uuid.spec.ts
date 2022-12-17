@@ -1,12 +1,11 @@
 import Core from '@core/index.js'
-import 'jest-extended'
 
 describe('UUID', () => {
   describe('generate(): string', () => {
     it('return string', () => {
       const result = Core.UUID.generate()
 
-      expect(result).toBeString()
+      expect(result).not.toBe('')
     })
 
     it('return different strings', () => {

@@ -321,18 +321,6 @@
   dependencies:
     "@blackglory/errors" "^2.2.2"
 
-"@blackglory/jest-matchers@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@blackglory/jest-matchers/-/jest-matchers-0.5.0.tgz#6ea77e34ef5f315ad55c018c5d7224080cfa05da"
-  integrity sha512-7Q42MdT5H+iTMHI7qsCRtCXhGxesRGcVOBnBRGs7QivhhQGWhfn1KaMVO0nVWi1O8auo4FSVVT0jLRWIu9CGJg==
-  dependencies:
-    "@blackglory/go" "^1.1.2"
-    "@blackglory/types" "^1.4.0"
-    "@types/node" "14"
-    extra-filesystem "^0.4.6"
-    extra-stream "^0.1.6"
-    jest-diff "^29.2.1"
-
 "@blackglory/jest-resolver@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@blackglory/jest-resolver/-/jest-resolver-0.3.0.tgz#2699a157bfcd7b27b6ac1e90b3b6ddda5b725fc2"
@@ -1067,15 +1055,15 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.17.tgz#a8ddf6e0c2341718d74ee3dc413a13a042c45a0c"
   integrity sha512-e8PUNQy1HgJGV3iU/Bp2+D/DXh3PYeyli8LgIwsQcs1Ar1LoaWHSIT6Rw+H2rNJmiq6SNWiDytfx8+gYj7wDHw==
 
-"@types/node@14", "@types/node@^14.0.0":
-  version "14.18.34"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.34.tgz#cd2e6fa0dbfb08a62582a7b967558e73c32061ec"
-  integrity sha512-hcU9AIQVHmPnmjRK+XUUYlILlr9pQrsqSrwov/JK1pnf3GTQowVBhx54FbvM0AU/VXGH4i3+vgXS5EguR7fysA==
-
 "@types/node@16":
   version "16.11.14"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.14.tgz#4939fb42e5b0ffb3ea7e193c28244fe7414977a6"
   integrity sha512-mK6BKLpL0bG6v2CxHbm0ed6RcZrAtTHBTd/ZpnlVPVa3HkumsqLE4BC4u6TQ8D7pnrRbOU0am6epuALs+Ncnzw==
+
+"@types/node@^14.0.0":
+  version "14.18.34"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.34.tgz#cd2e6fa0dbfb08a62582a7b967558e73c32061ec"
+  integrity sha512-hcU9AIQVHmPnmjRK+XUUYlILlr9pQrsqSrwov/JK1pnf3GTQowVBhx54FbvM0AU/VXGH4i3+vgXS5EguR7fysA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -2560,7 +2548,7 @@ extra-fetch@^4.0.1:
     return-style "^1.0.0"
     value-getter "^0.2.4"
 
-extra-filesystem@^0.4.6, extra-filesystem@^0.4.8:
+extra-filesystem@^0.4.8:
   version "0.4.8"
   resolved "https://registry.yarnpkg.com/extra-filesystem/-/extra-filesystem-0.4.8.tgz#951d7d0b588c59328071c34dd793f52fdc32fb1a"
   integrity sha512-UiWKv8fSAfy5iB+kFWddHO/mt4qbzw0JUz2LWq+wu/jFEKCXQJ53+sps/0MZZV8Exag0ZBvG1j6X6NmwhaI9Aw==
@@ -2659,13 +2647,6 @@ extra-semver@^0.1.0:
   dependencies:
     "@blackglory/errors" "^2.1.0"
     semver "^7.3.5"
-
-extra-stream@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/extra-stream/-/extra-stream-0.1.6.tgz#ed082047a3b940dca568b800bf8777a42747fea9"
-  integrity sha512-XeHXSsY039MuSWA+Ms4UZDdDF507/Zk1xO4yokdFgmKHGwIgf6WkDOQd4nAl+bTHxSLUPW1z284F12qkSI2vVQ==
-  dependencies:
-    "@blackglory/types" "^1.4.0"
 
 extra-tags@^0.2.6:
   version "0.2.6"
@@ -3555,7 +3536,7 @@ jest-config@^29.3.1:
     slash "^3.0.0"
     strip-json-comments "^3.1.1"
 
-jest-diff@^29.0.0, jest-diff@^29.2.1, jest-diff@^29.3.1:
+jest-diff@^29.3.1:
   version "29.3.1"
   resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-29.3.1.tgz#d8215b72fed8f1e647aed2cae6c752a89e757527"
   integrity sha512-vU8vyiO7568tmin2lA3r2DP8oRvzhvRcD4DjpXc6uGveQodyk7CKLhQlCSiwgx3g0pFaE88/KLZ0yaTWMc4Uiw==
@@ -3595,15 +3576,7 @@ jest-environment-node@^29.3.1:
     jest-mock "^29.3.1"
     jest-util "^29.3.1"
 
-jest-extended@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/jest-extended/-/jest-extended-3.2.0.tgz#4333dbb47e40acef3abccb1d22b7769c5fa90a0b"
-  integrity sha512-jy+1nwlPLPPR6O8O9Mn+BWCBq/jL/9OgdKEG8ekOSQoLyVvAO5nND8ll3UxoajzBu4kYyn7zUKYWRdnTfQPcVw==
-  dependencies:
-    jest-diff "^29.0.0"
-    jest-get-type "^29.0.0"
-
-jest-get-type@^29.0.0, jest-get-type@^29.2.0:
+jest-get-type@^29.2.0:
   version "29.2.0"
   resolved "https://registry.yarnpkg.com/jest-get-type/-/jest-get-type-29.2.0.tgz#726646f927ef61d583a3b3adb1ab13f3a5036408"
   integrity sha512-uXNJlg8hKFEnDgFsrCjznB+sTxdkuqiCL6zMgA75qEbAJjJYTs9XPrvDctrEig2GDow22T/LvHgO57iJhXB/UA==
