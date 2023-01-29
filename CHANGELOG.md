@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/BlackGlory/uid/compare/v3.0.0...v4.0.0) (2023-01-29)
+
+
+### ⚠ BREAKING CHANGES
+
+* The `Accept-Version` header is semver now.
+
+* upgrade dependencies ([5c65573](https://github.com/BlackGlory/uid/commit/5c6557382de5bbae7ec3c0a6874b97f1e1dffb1b))
+
 ## [3.0.0](https://github.com/BlackGlory/uid/compare/v2.3.2...v3.0.0) (2022-12-02)
 
 
