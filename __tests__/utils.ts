@@ -1,6 +1,7 @@
 import { buildServer } from '@src/server.js'
+import { UnpackedPromise } from 'hotypes'
 
-let server: ReturnType<typeof buildServer>
+let server: UnpackedPromise<ReturnType<typeof buildServer>>
 let address: string
 
 export function getAddress() {
@@ -8,7 +9,7 @@ export function getAddress() {
 }
 
 export async function startService() {
-  server = buildServer()
+  server = await buildServer()
   address = await server.listen()
 }
 

@@ -18,14 +18,15 @@ const pkg = readJSONFileSync<{ version: string }>(
 
 type LoggerLevel = 'trace' | 'debug' | 'info' | 'warn' | 'error' | 'fatal'
 
-export function buildServer() {
+export async function buildServer() {
   const server = fastify({
     forceCloseConnections: true
   , logger: getLoggerOptions()
   })
 
   server.addHook('onRequest', async (req, reply) => {
-    reply.headers({ 'Cache-Control': 'private, no-cache' })
+    // eslint-disable-next-line
+    reply.header('Cache-Control', 'private, no-cache')
   })
   server.addHook('onRequest', async (req, reply) => {
     const acceptVersion = req.headers['accept-version']
@@ -37,10 +38,10 @@ export function buildServer() {
     }
   })
 
-  server.register(cors, { origin: true })
-  server.register(uid, { api })
-  server.register(robots)
-  server.register(health)
+  await server.register(cors, { origin: true })
+  await server.register(uid, { api })
+  await server.register(robots)
+  await server.register(health)
 
   return server
 }
