@@ -4,7 +4,7 @@ import { routes as uid } from '@services/uid/index.js'
 import { routes as robots } from '@services/robots/index.js'
 import { routes as health } from '@services/health/index.js'
 import { NODE_ENV, NodeEnv } from '@env/index.js'
-import Core from '@core/index.js'
+import { api } from '@api/index.js'
 import path from 'path'
 import { getAppRoot } from '@src/utils.js'
 import { readJSONFileSync } from 'extra-filesystem'
@@ -38,7 +38,7 @@ export function buildServer() {
   })
 
   server.register(cors, { origin: true })
-  server.register(uid, { Core })
+  server.register(uid, { api })
   server.register(robots)
   server.register(health)
 

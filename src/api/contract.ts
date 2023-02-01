@@ -1,4 +1,4 @@
-interface ICore {
+export interface IAPI {
   Nanoid: {
     generate(): string
   }

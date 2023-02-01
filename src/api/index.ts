@@ -1,9 +1,8 @@
 import * as Nanoid from './nanoid.js'
 import * as UUID from './uuid.js'
+import { IAPI } from './contract.js'
 
-const Core: ICore = {
+export const api: IAPI = {
   Nanoid
 , UUID
 }
-
-export default Core
