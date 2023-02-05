@@ -1,7 +1,7 @@
 import { FastifyPluginAsync } from 'fastify'
-import { IAPI } from '@api/contract.js'
+import { IAPI } from '@src/contract.js'
 
-export const routes: FastifyPluginAsync<{ api: IAPI }> = async (server, { api }) => {
+export const routes: FastifyPluginAsync<{ API: IAPI }> = async (server, { API }) => {
   server.get('/uuid', {
     schema: {
       response: {
@@ -9,7 +9,7 @@ export const routes: FastifyPluginAsync<{ api: IAPI }> = async (server, { api })
       }
     }
   }, (req, reply) => {
-    const result = api.UUID.generate()
+    const result = API.generateUUID()
 
     return reply.send(result)
   })

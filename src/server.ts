@@ -4,9 +4,9 @@ import { routes as uid } from '@services/uid/index.js'
 import { routes as robots } from '@services/robots/index.js'
 import { routes as health } from '@services/health/index.js'
 import { NODE_ENV, NodeEnv } from '@env/index.js'
-import { api } from '@api/index.js'
+import { API } from '@apis/index.js'
 import path from 'path'
-import { getAppRoot } from '@src/utils.js'
+import { getAppRoot } from '@utils/get-app-root.js'
 import { readJSONFileSync } from 'extra-filesystem'
 import { isntUndefined, isString } from '@blackglory/prelude'
 import { assert } from '@blackglory/errors'
@@ -39,7 +39,7 @@ export async function buildServer() {
   })
 
   await server.register(cors, { origin: true })
-  await server.register(uid, { api })
+  await server.register(uid, { API })
   await server.register(robots)
   await server.register(health)
 

@@ -1,7 +1,7 @@
 import { FastifyPluginAsync } from 'fastify'
-import { IAPI } from '@api/contract.js'
+import { IAPI } from '@src/contract.js'
 
-export const routes: FastifyPluginAsync<{ api: IAPI }> = async (server, { api }) => {
+export const routes: FastifyPluginAsync<{ API: IAPI }> = async (server, { API }) => {
   server.get('/nanoid', {
     schema: {
       response: {
@@ -9,7 +9,7 @@ export const routes: FastifyPluginAsync<{ api: IAPI }> = async (server, { api })
       }
     }
   }, (req, reply) => {
-    const result = api.Nanoid.generate()
+    const result = API.generateNanoID()
 
     return reply.send(result)
   })

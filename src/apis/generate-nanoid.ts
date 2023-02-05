@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid'
 
-export function generate(): string {
+export function generateNanoID(): string {
   return nanoid()
 }
