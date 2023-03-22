@@ -37,8 +37,10 @@ services:
 ```
 
 ## API
-### generateNanoID
+### generate Nano ID
 `GET /nanoid`
+
+Return a Nano ID as a text.
 
 #### Example
 ##### curl
@@ -52,10 +54,10 @@ await fetch('http://localhost:8080/nanoid')
   .then(res => res.text())
 ```
 
-### generateUUID
-=GET /uuid=
+### generate UUID
+`GET /uuid`
 
-Return string.
+Return a uuid as a text.
 
 #### Example
 ##### curl
