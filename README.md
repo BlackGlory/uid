@@ -1,19 +1,8 @@
 # UID
 Web-friendly microservice for generating unpredictable UIDs.
 
-## Quickstart
-```sh
-docker run \
-  --detach \
-  --publish 8080:8080 \
-  blackglory/uid
-```
-
 ## Install
-The environment variables`UID_HOST`and`UID_PORT`can be used to set the address and port
-that the server listens to.
-The default values are `localhost` and `8080`.
-
+### Install from source
 ```sh
 git clone https://github.com/BlackGlory/uid
 cd uid
@@ -21,6 +10,15 @@ yarn install
 yarn build
 yarn bundle
 yarn --silent start
+```
+
+### Build from source
+```sh
+git clone https://github.com/BlackGlory/uid
+cd uid
+yarn install
+yarn build
+yarn docker:build
 ```
 
 ### Recipes
@@ -70,3 +68,12 @@ curl http://localhost:8080/uuid
 await fetch('http://localhost:8080/uuid')
   .then(res => res.text())
 ```
+
+## Environment variables
+### `UID_HOST`, `UID_PORT`
+The environment variables`UID_HOST`and`UID_PORT`can be used to set the address and port
+that the server listens to.
+The default values are `localhost` and `8080`.
+
+## Clients
+- JavaScript/TypeScript(Node.js, Browser): <https://github.com/BlackGlory/uid-js>
