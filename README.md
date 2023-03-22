@@ -1,5 +1,5 @@
 # UID
-Web-friendly microservice for generating unpredictable UIDs.
+It provide a UUID generator with HTTP.
 
 ## Install
 ### Install from source
