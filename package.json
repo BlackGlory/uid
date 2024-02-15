@@ -21,7 +21,7 @@
     "smoke": "cross-env NODE_ENV=test node dist/index.cjs",
     "docker:build": "docker build --tag uid .",
     "docker:test": "docker-compose --file docker-compose.test.yml run --rm test",
-    "bench": "ts-node --esm --require tsconfig-paths/register benches/index.ts",
+    "bench": "tsx benches/index.ts",
     "release": "standard-version"
   },
   "husky": {
@@ -56,7 +56,7 @@
     "standard-version": "^9.5.0",
     "ts-jest": "^29.0.5",
     "ts-patch": "^2.1.0",
-    "tsconfig-paths": "^4.1.2",
+    "tsx": "^4.7.1",
     "typescript": "4.8",
     "typescript-transform-paths": "^3.4.6",
     "webpack": "^5.75.0",
