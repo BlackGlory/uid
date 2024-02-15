@@ -1,4 +1,4 @@
-FROM node:16-alpine AS builder
+FROM node:18-alpine AS builder
 WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
 
@@ -13,7 +13,7 @@ COPY . ./
 RUN yarn build \
  && yarn bundle
 
-FROM node:16-alpine
+FROM node:18-alpine
 WORKDIR /usr/src/app
 COPY --from=builder /usr/src/app/dist /usr/src/app/dist
 COPY package.json yarn.lock ./

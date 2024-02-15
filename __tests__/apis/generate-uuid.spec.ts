@@ -1,3 +1,4 @@
+import { describe, it, expect } from 'vitest'
 import { API } from '@apis/index.js'
 
 describe('generateUUID', () => {
