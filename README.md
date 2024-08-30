@@ -1,5 +1,5 @@
 # UID
-It provide a UUID generator with HTTP.
+An UUID generator with HTTP.
 
 ## Install
 ### Install from source
